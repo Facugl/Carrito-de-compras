@@ -58,7 +58,6 @@ function eliminarCurso(e) {
 
 // Lee el contenido del HTML al que le dimos click y extrae la información del curso
 function leerDatosCurso(curso) {
-    // console.log(curso);
 
     // crear un objeto con el contenido del curso actual
     const infoCurso = {
@@ -71,9 +70,9 @@ function leerDatosCurso(curso) {
 
     // Revisa si un elemento ya existe en el carrito
     const existe = articulosCarrito.some(curso => curso.id === infoCurso.id);
-    if(existe) {
+    if (existe) {
         // Actualizamos la cantidad
-        const cursos = articulosCarrito.map( curso => {
+        const cursos = articulosCarrito.map(curso => {
             if (curso.id === infoCurso.id) {
                 curso.cantidad++;
                 return curso; // Retorna el onjeto actualizado
@@ -88,10 +87,6 @@ function leerDatosCurso(curso) {
     }
 
 
-
-
-    console.log(articulosCarrito);
-
     carritoHTML();
 }
 
@@ -103,12 +98,12 @@ function carritoHTML() {
     limpiarHTML();
 
     // Recorre el carrito y genera el HTML
-    articulosCarrito.forEach( curso => {
+    articulosCarrito.forEach(curso => {
         const {imagen, titulo, precio, cantidad, id} = curso;
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>
-                <img src="${imagen}" wudth="100">
+                <img src="${imagen}" width="100">
             </td>
             <td>${titulo}</td>
             <td>${precio}</td>
@@ -124,10 +119,8 @@ function carritoHTML() {
 
     // Agregar el carrito de compras el storage
     sincronizarStorage();
-
-
-
 }
+
 
 function sincronizarStorage() {
     localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
