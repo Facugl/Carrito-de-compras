@@ -4,4 +4,4 @@ Este proyecto forma parte del curso [JavaScript Moderno Guía Definitiva Constru
 [![Previsualización](https://i.ibb.co/Lxk9z6Z/Carrito-Local-Storage.jpg "Previsualización")](http://https://i.ibb.co/Lxk9z6Z/Carrito-Local-Storage.jpg "Previsualización")
 
 ### :rocket: Deploy del sitio
-Pueden visitar el sitio en el siguiente [link](http://https://facugl.github.io/Carrito-de-compras/ "link").
+Pueden visitar el sitio en el siguiente [link](https://facugl.github.io/Carrito-de-compras/# "link").
